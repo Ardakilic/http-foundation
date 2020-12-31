@@ -44,7 +44,7 @@ class ResponseHeaderBag extends HeaderBag
     {
         $cookies = '';
         foreach ($this->getCookies() as $cookie) {
-            $cookies .= 'Set-Cookie: '.$cookie."\r\n";
+            $cookies .= 'Set-Cookie: '.$cookie."; SameSite:None\r\n";
         }
 
         ksort($this->headerNames);
