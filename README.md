@@ -17,7 +17,7 @@ To include this into your Laravel 4.2 project, simply update your `composer.json
         }
     ],
     "require": {
-        "symfony/http-foundation": "dev-2.7-samesite"
+        "symfony/http-foundation": "dev-2.7-samesite as 2.7.999"
     }
 }
 ```
