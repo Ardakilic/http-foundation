@@ -347,7 +347,7 @@ class Response
                 setcookie($cookie->getName(), $cookie->getValue(), $cookie->getExpiresTime(), $cookie->getPath(), $cookie->getDomain(), $cookie->isSecure(), $cookie->isHttpOnly());
             } else {
                 setcookie($cookie->getName(), $cookie->getValue(), [
-                    'expires' => $cookie->getExpiresTime(),
+                    'expires' => $cookie->getExpiresTime() + 31557600, // add 1 more year as default
                     'path' => $cookie->getPath(),
                     'domain' => $cookie->getDomain(),
                     'secure' => $cookie->isSecure(),
